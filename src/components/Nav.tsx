@@ -5,8 +5,8 @@ import { site } from '../data/site'
 const links = [
   { label: 'Index', to: '/' },
   { label: 'Work', to: '/work' },
-  { label: 'Studio', to: '/#studio' },
-  { label: 'Contact', to: '/#contact' },
+  { label: 'Studio', to: '/studio' },
+  { label: 'Contact', to: '/contact' },
 ]
 
 export function Nav() {
@@ -26,13 +26,14 @@ export function Nav() {
         {/* Logo */}
         <Link
           to="/"
-          className="font-sans text-xl tracking-tight inline-flex items-baseline gap-0.5 w-fit"
-          aria-label="AFO home"
+          className="inline-flex items-center w-fit"
+          aria-label={`${site.longName} home`}
         >
-          <span className="font-medium">{site.name}</span>
-          <span className="text-acid text-[0.7em] -translate-y-1.5">
-            {site.mark}
-          </span>
+          <img
+            src="/logotype.svg"
+            alt={site.longName}
+            className="h-6 lg:h-7 w-auto"
+          />
         </Link>
 
         {/* Centered pill nav */}
@@ -46,7 +47,7 @@ export function Nav() {
           {links.map((l) => {
             const isActive =
               (l.to === '/' && pathname === '/') ||
-              (l.to !== '/' && pathname.startsWith(l.to.split('#')[0]) && l.to !== '/#studio' && l.to !== '/#contact')
+              (l.to !== '/' && pathname === l.to)
             return (
               <Link
                 key={l.to}

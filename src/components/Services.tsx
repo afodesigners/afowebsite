@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { services } from '../data/site'
 
 export function Services() {
@@ -42,23 +41,20 @@ export function Services() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-px bg-bone/10 rounded-2xl overflow-hidden">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-px bg-bone/10 rounded-2xl overflow-hidden">
           {services.map((s) => (
             <article
               key={s.n}
               data-service
-              className="group relative bg-ink p-10 lg:p-14 transition-colors duration-500 hover:bg-bone/[0.04] cursor-pointer"
+              className="group relative bg-ink p-8 lg:p-10 transition-colors duration-500 hover:bg-bone/[0.04]"
             >
               <div className="flex items-start justify-between gap-6">
                 <span className="font-mono text-sm text-bone/40">{s.n}</span>
-                <span className="size-9 rounded-full border border-bone/20 grid place-items-center text-sm text-bone/60 group-hover:bg-acid group-hover:border-acid group-hover:text-ink transition-all duration-500">
-                  →
-                </span>
               </div>
-              <h3 className="mt-16 lg:mt-24 font-display font-light text-3xl lg:text-5xl leading-[1.05] tracking-[-0.02em]">
+              <h3 className="mt-14 lg:mt-20 font-display font-light text-2xl lg:text-3xl leading-[1.1] tracking-[-0.02em]">
                 {s.title}
               </h3>
-              <p className="mt-5 text-bone/65 max-w-md leading-relaxed">
+              <p className="mt-4 text-bone/65 text-sm lg:text-base leading-relaxed">
                 {s.body}
               </p>
             </article>
