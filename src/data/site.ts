@@ -11,6 +11,12 @@ export const site = {
     'We are a small studio in Jakarta — clear, collaborative, focused. We shape every project with intention, so each release feels inevitable instead of accidental.',
   bookingUrl: 'https://calendly.com/heyafteroffice/30min',
   email: 'hello@afterofficestudio.com',
+  phone: '+62 811 1234 5678',
+  address: {
+    line1: 'After Office Studio',
+    line2: 'Jl. Kemang Raya No. 12',
+    line3: 'Jakarta Selatan 12730, Indonesia',
+  },
   location: 'Jakarta · Worldwide',
   socials: [
     { label: 'Instagram', href: '#' },
@@ -156,33 +162,157 @@ export const values = [
   'Inspiration',
 ]
 
-export const testimonials = [
+export type Testimonial = {
+  name: string
+  role: string
+  company?: string
+  quote: string
+  accent?: string
+}
+
+export const testimonials: Testimonial[] = [
   {
     name: 'Jerome',
-    role: 'Founder, Studio Client',
+    role: 'Founder',
+    company: 'Nexvend',
     quote:
       "AFO didn't just deliver a brand — they handed us a tool we use every single day.",
+    accent: '#FF7A3D',
   },
   {
     name: 'Felix',
     role: 'Marketing Lead',
+    company: 'Charmrise',
     quote:
       'Calm, surgical, and obsessed with the detail. The bar for our team is now permanently higher.',
+    accent: '#D6FF3D',
   },
   {
     name: 'Trio',
-    role: 'CEO, Edutech',
+    role: 'CEO',
+    company: 'Macrons Academy',
     quote:
       'They understood the brief faster than our internal team. Twice the output, half the noise.',
+    accent: '#FFC93C',
   },
   {
     name: 'Khan',
     role: 'Founder',
-    quote: 'AFO is the only studio I send unsolicited referrals to. They earn it.',
+    company: 'Sorlys Eindom',
+    quote:
+      'AFO is the only studio I send unsolicited referrals to. They earn it.',
+    accent: '#8AB6FF',
   },
   {
     name: 'Jonathan',
     role: 'Brand Director',
+    company: 'Family Garden Inn',
     quote: 'Working with AFO feels like cheating. In the best way.',
+    accent: '#C0FF92',
+  },
+  {
+    name: 'Deborah',
+    role: 'Account Director',
+    company: 'Independent',
+    quote:
+      'The innovative approach and fast delivery were exactly what we needed. The team was collaborative and brought our ideas to life beautifully.',
+    accent: '#F3F1EA',
+  },
+  {
+    name: 'Emma',
+    role: 'Creative Lead',
+    company: 'Bright 5',
+    quote:
+      'The creativity and professionalism were unmatched. Our project was delivered on time and captured exactly what we envisioned.',
+    accent: '#8AB6FF',
+  },
+]
+
+export type TeamMember = {
+  name: string
+  role: string
+  initials: string
+}
+
+export const team: TeamMember[] = [
+  { name: 'Kurniawan Nugraha', role: 'Founder · Creative Director', initials: 'KN' },
+  { name: 'Aulia Rizki', role: 'Design Lead', initials: 'AR' },
+  { name: 'Dimas Pratama', role: 'Engineering Lead', initials: 'DP' },
+  { name: 'Sasha Maharani', role: 'Brand Strategist', initials: 'SM' },
+  { name: 'Reza Ardiansyah', role: 'Motion Designer', initials: 'RA' },
+  { name: 'Naya Putri', role: 'Producer', initials: 'NP' },
+]
+
+export const principles = [
+  {
+    tag: 'A',
+    title: 'Less, but better.',
+    body: 'We strip what doesn\'t serve the work. Clarity is the result of dozens of quiet decisions to remove, not add.',
+  },
+  {
+    tag: 'B',
+    title: 'Long over loud.',
+    body: 'Trends rotate. Systems compound. We build identities and products that still read in five years.',
+  },
+  {
+    tag: 'C',
+    title: 'One room, no walls.',
+    body: 'Strategy, design, and engineering sit at the same table. No handoff tax, no telephone game — one team, one direction.',
+  },
+]
+
+export type OpenRole = {
+  title: string
+  type: string
+  location: string
+  body: string
+}
+
+export const openRoles: OpenRole[] = [
+  {
+    title: 'Brand Designer',
+    type: 'Full-time',
+    location: 'Jakarta · Hybrid',
+    body: 'You\'ll lead identity systems from blank page to brand book — logo, type, color, voice. Strong portfolio of editorial-grade work expected.',
+  },
+  {
+    title: 'Product Designer',
+    type: 'Full-time',
+    location: 'Remote · GMT±3',
+    body: 'Own end-to-end product flows for our retainer clients. Comfortable shipping in Figma, fluent in interaction craft and live prototypes.',
+  },
+  {
+    title: 'Creative Developer',
+    type: 'Contract',
+    location: 'Remote',
+    body: 'You bring designs to life on the web — React, GSAP, WebGL, the works. Bonus points for an obsession with micro-interactions.',
+  },
+]
+
+export type Faq = {
+  q: string
+  a: string
+}
+
+export const faqs: Faq[] = [
+  {
+    q: 'How do projects start?',
+    a: 'Send a short note about what you\'re building and your timeline. If we\'re a fit, we\'ll book a 30-minute call and scope a small first phase together — usually a one-week sprint.',
+  },
+  {
+    q: 'What do projects typically cost?',
+    a: 'Most engagements land between $18k and $80k depending on scope. We\'ll share a flat, milestone-based proposal after our first call — no hourly billing.',
+  },
+  {
+    q: 'How many projects do you take on?',
+    a: 'Two to three at a time, max. We\'re a small team by design, so the founder stays close to every project from kickoff to launch.',
+  },
+  {
+    q: 'Do you work with early-stage startups?',
+    a: 'Often. About half of our work is with founders raising or just past their seed round. We\'ll be honest if the timing isn\'t right.',
+  },
+  {
+    q: 'Where are you based?',
+    a: 'Jakarta, Indonesia — working with founders and teams across Asia, Europe, and the US. Async by default, with weekly checkpoints in your timezone.',
   },
 ]

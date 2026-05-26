@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 const STATS = [
   { v: '12+', l: 'Brands shipped' },
@@ -84,12 +83,12 @@ export function LightShowcase() {
             data-belief-h
             className="font-sans font-light text-[clamp(2.5rem,7vw,7rem)] leading-[1.02] tracking-[-0.025em] max-w-[18ch]"
           >
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.35em]">
               <span data-belief-line className="inline-block">
                 A small team.
               </span>
             </span>
-            <span className="block overflow-hidden">
+            <span className="block overflow-hidden pb-[0.35em]">
               <span data-belief-line className="inline-block text-bone/45">
                 A bigger impact.
               </span>

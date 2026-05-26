@@ -1,6 +1,5 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { site } from '../data/site'
 import { useMagnetic } from '../hooks/useMagnetic'
 
@@ -91,12 +90,6 @@ export function CTA() {
           >
             Book a call
             <span className="size-2 rounded-full bg-ink" />
-          </a>
-          <a
-            href={`mailto:${site.email}`}
-            className="text-sm uppercase tracking-[0.25em] text-bone/70 hover:text-bone underline-offset-8 hover:underline transition"
-          >
-            or email us &nbsp;↗
           </a>
         </div>
       </div>

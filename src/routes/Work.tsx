@@ -266,7 +266,6 @@ export default function Work() {
           style={{ fontSize: 'clamp(8rem, 16vw, 22rem)' }}
         >
           Work
-          <span className="inline-block ml-2 text-acid/30">.</span>
         </span>
       </div>
 
@@ -377,12 +376,14 @@ export default function Work() {
           <div className="flex items-center justify-between pointer-events-auto">
             <Link
               to="/"
-              className="inline-flex items-baseline gap-0.5 text-xl tracking-tight text-bone"
+              className="inline-flex items-center"
+              aria-label={`${site.longName} home`}
             >
-              <span className="font-medium">{site.name}</span>
-              <span className="text-acid text-[0.7em] -translate-y-1.5 font-medium">
-                {site.mark}
-              </span>
+              <img
+                src="/logotype.svg"
+                alt={site.longName}
+                className="h-6 lg:h-7 w-auto"
+              />
             </Link>
 
             <div className="hidden md:flex items-center gap-3 text-[10px] uppercase tracking-[0.32em] text-bone/55">
