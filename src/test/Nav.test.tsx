@@ -21,9 +21,9 @@ describe('Nav', () => {
 
   it('shows nav links pointing at real routes', () => {
     renderNavAt('/')
-    expect(screen.getByRole('link', { name: /^index$/i })).toHaveAttribute('href', '/')
-    expect(screen.getByRole('link', { name: /^work$/i })).toHaveAttribute('href', '/work')
-    expect(screen.getByRole('link', { name: /^studio$/i })).toHaveAttribute('href', '/studio')
+    expect(screen.getByRole('link', { name: /^home$/i })).toHaveAttribute('href', '/')
+    expect(screen.getByRole('link', { name: /^projects$/i })).toHaveAttribute('href', '/work')
+    expect(screen.getByRole('link', { name: /^about$/i })).toHaveAttribute('href', '/studio')
     expect(screen.getByRole('link', { name: /^contact$/i })).toHaveAttribute('href', '/contact')
   })
 

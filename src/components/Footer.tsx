@@ -1,4 +1,5 @@
 import { useEffect, useRef } from 'react'
+import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { site } from '../data/site'
 
@@ -42,10 +43,10 @@ export function Footer() {
               Studio
             </div>
             <ul className="space-y-2 text-base">
-              <li><a href="#work" className="hover:text-acid transition">Work</a></li>
-              <li><a href="#studio" className="hover:text-acid transition">Studio</a></li>
-              <li><a href="#services" className="hover:text-acid transition">Services</a></li>
-              <li><a href="#contact" className="hover:text-acid transition">Contact</a></li>
+              <li><Link to="/" className="hover:text-acid transition">Home</Link></li>
+              <li><Link to="/work" className="hover:text-acid transition">Projects</Link></li>
+              <li><Link to="/studio" className="hover:text-acid transition">About</Link></li>
+              <li><Link to="/contact" className="hover:text-acid transition">Contact</Link></li>
             </ul>
           </div>
 
