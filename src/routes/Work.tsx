@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { Draggable } from 'gsap/Draggable'
 import { InertiaPlugin } from 'gsap/InertiaPlugin'
@@ -37,6 +37,7 @@ for (let i = -1; i <= 1; i++) {
 }
 
 export default function Work() {
+  const navigate = useNavigate()
   const wrapRef = useRef<HTMLDivElement>(null)
   const canvasRef = useRef<HTMLDivElement>(null)
   const proxyRef = useRef<HTMLDivElement>(null)
@@ -105,7 +106,8 @@ export default function Work() {
       throwResistance: 1400,
       dragResistance: 0.06,
       // GSAP only fires onClick if the user pressed-and-released
-      // WITHOUT dragging — exactly the behavior we want.
+      // WITHOUT dragging — exactly the behavior we want. We navigate
+      // to the project detail page; the live-site link lives there.
       onClick() {
         const e = this.pointerEvent as PointerEvent | MouseEvent | undefined
         if (!e) return
@@ -114,9 +116,9 @@ export default function Work() {
           '[data-canvas-card]',
         ) as HTMLElement | null
         if (!card) return
-        const href = card.dataset.cardHref
-        if (href && href !== '#') {
-          window.open(href, '_blank', 'noopener,noreferrer')
+        const slug = card.dataset.cardSlug
+        if (slug) {
+          navigate(`/work/${slug}`)
         }
       },
       onPress() {
@@ -292,7 +294,7 @@ export default function Work() {
                   key={`${tileI}-${i}`}
                   data-canvas-card
                   data-card-idx={i}
-                  data-card-href={p.href}
+                  data-card-slug={p.id}
                   className="absolute top-1/2 left-1/2 will-change-transform group"
                   style={{
                     transform: `translate(-50%, -50%) translate(${cardX}px, ${cardY}px)`,
@@ -413,7 +415,7 @@ export default function Work() {
         <footer className="mt-auto pointer-events-none px-6 lg:px-10 pb-5 lg:pb-7">
           <div className="flex items-center justify-between gap-4 text-[10px] uppercase tracking-[0.3em] text-bone/40">
             <span className="font-mono pointer-events-auto">
-              Drag · scroll · click to open
+              Drag · scroll · click for case study
             </span>
             <div className="hidden md:flex items-center gap-1.5 pointer-events-auto">
               {projects.map((_, i) => (

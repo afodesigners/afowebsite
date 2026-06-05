@@ -49,7 +49,7 @@ export function WorkTeaser() {
           {featured.map((p, i) => (
             <Link
               key={p.id}
-              to="/work"
+              to={`/work/${p.id}`}
               data-teaser-card
               className="group relative rounded-2xl overflow-hidden border border-bone/8 bg-bone/[0.02] hover:bg-bone/[0.04] transition-colors duration-500"
             >

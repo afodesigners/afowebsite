@@ -3,9 +3,9 @@ import { Link, useLocation } from 'react-router-dom'
 import { site } from '../data/site'
 
 const links = [
-  { label: 'Index', to: '/' },
-  { label: 'Work', to: '/work' },
-  { label: 'Studio', to: '/studio' },
+  { label: 'Home', to: '/' },
+  { label: 'Projects', to: '/work' },
+  { label: 'About', to: '/studio' },
   { label: 'Contact', to: '/contact' },
 ]
 
