@@ -3,8 +3,12 @@ export const site = {
   mark: '®',
   longName: 'After Office',
   yearRange: '© 2022—26',
-  // Hero — short, bold, two-beat statement
-  heroSentence: 'Big ideas. Bold impact.',
+  // Hero — typed headline. First clause types in bone, second in acid.
+  heroHeadlineLead: 'Turn Ideas.',
+  heroHeadlineAccent: 'Into Impact.',
+  // Hero description (Option 2 — technical-result framing).
+  heroDescription:
+    'We transform your brand into a compelling narrative, strategically crafted to engage your audience and accelerate conversion.',
   // Intro / Manifesto — single statement
   introEyebrow: 'Ideas in motion',
   introStatement:
@@ -19,10 +23,10 @@ export const site = {
   },
   location: 'Jakarta · Worldwide',
   socials: [
-    { label: 'Instagram', href: '#' },
-    { label: 'LinkedIn', href: '#' },
-    { label: 'Behance', href: '#' },
-    { label: 'Dribbble', href: '#' },
+    { label: 'Instagram', href: 'https://www.instagram.com/heyafteroffice/' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gerald-mamengko-a7b05b13a/' },
+    { label: 'Behance', href: 'https://www.behance.net/geraldmamengko09' },
+    { label: 'Dribbble', href: 'https://dribbble.com/GeraldDo' },
   ],
 }
 
@@ -479,13 +483,13 @@ export const founders: Founder[] = [
   {
     name: 'Gerald Mamengko',
     role: 'Founder',
-    portrait: UNSPLASH('photo-1507003211169-0a1dd7228f2d', 800),
+    portrait: '/team/gerald.webp',
     accent: '#D6FF3D',
   },
   {
     name: 'Kurniawan Nugraha',
     role: 'Co-founder',
-    portrait: UNSPLASH('photo-1494790108377-be9c29b29330', 800),
+    portrait: '/team/kurniawan.webp',
     accent: '#FF7A3D',
   },
 ]
